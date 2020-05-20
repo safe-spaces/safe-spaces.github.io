@@ -1,6 +1,15 @@
-
+window.addEventListener( "pageshow", function ( event ) {
+    var historyTraversal = event.persisted || 
+                           ( typeof window.performance != "undefined" && 
+                                window.performance.navigation.type === 2 );
+    if ( historyTraversal ) {
+      // Handle page restore.
+      window.location.reload();
+    }
+});
 
 $(document).ready(function (){
+    
     $(".safe_title").css('margin-left', (-($(".safe_title").width()/2)).toString()+"px");
     $(".space_title").css('margin-left', (-($(".space_title").width()/2)).toString()+"px");
 
@@ -38,9 +47,6 @@ $(document).ready(function (){
         $("#inside1").animate({'left':'-70%'},speed*1000, 'linear');
         $("#images1").animate({'left':'-30%'},speed*1000, 'linear');
         $("#read1").animate({'left':'-100%'},speed*1000, 'linear');
-
-
     }
 
-    
 });

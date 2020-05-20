@@ -8,6 +8,13 @@ window.addEventListener( "pageshow", function ( event ) {
     }
 });
 
+window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#hi';
+        window.location.reload();
+    }
+  }
+
 $(document).ready(function (){
     
     $(".safe_title").css('margin-left', (-($(".safe_title").width()/2)).toString()+"px");

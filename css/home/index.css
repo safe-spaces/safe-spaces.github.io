@@ -1,6 +1,5 @@
-body{
-
-}
+body{overflow: hidden;}
+*{z-index: 0;}
 
 #background{
     position: fixed;
@@ -8,9 +7,51 @@ body{
     height:200%;
     left:0;
     top:0;
-    background-image:url("home.JPG");
-    background-size: 100% auto;
+    background-image:url("home.jpeg");
+    background-size:  auto 200%;
     background-position: 0px -500px;
     background-repeat: no-repeat;
     z-index:-1;
+}
+#titlebox{
+    position: fixed;
+    width:100%;
+    height:90%;
+    left:0;
+    top:5%;
+    /* background-color: blanchedalmond; */
+}#title{
+    position: absolute;
+    height:50%;
+    width: auto;
+}.safe_title{
+    top:0%;
+    left:50%;
+}.space_title{
+    top:50%;
+    left:50%;
+}
+
+.cloud{
+    position:absolute;
+}
+
+#inside0{
+    width:40%;height:auto;
+    top:50%;
+}#images0{
+    width:40%;height:auto;
+    top:1%;
+}#read0{
+    width:15%;height:auto;
+    top:25%;
+}#inside1{
+    width:40%;height:auto;
+    top:10%;
+}#images1{
+    width:40%;height:auto;
+    top:55%;
+}#read1{
+    width:15%;height:auto;
+    top:55%;
 }

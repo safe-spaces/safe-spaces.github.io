@@ -53,3 +53,15 @@ a{
     top:0%;
     vertical-align: middle;
 }
+
+.image_container{
+    position: fixed;
+    height:100%;
+    top:0%;left:50%;
+    text-align: center;
+}
+
+#IMAGES{
+    position: relative;
+    text-align: center;
+}

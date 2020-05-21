@@ -1,4 +1,4 @@
-body{overflow: hidden;}
+body{overflow-x: hidden;}
 *{z-index: 0;}
 
 #background{
@@ -15,9 +15,14 @@ body{overflow: hidden;}
 }
 .image_back{
     position: absolute;
-    width: 100%;
+    width: 95%;
     height:auto;
-    top:0;left:0;
-    background-color: blue;
-
+    top:50%;left:2.5%;
+    text-align: center;
+}
+.photo{
+    position:relative;
+    width:20%;height:auto;
+    padding: 80px;
+    top:0%;
 }

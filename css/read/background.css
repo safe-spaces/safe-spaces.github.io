@@ -1,5 +1,9 @@
-
-
+a{
+    border: none !important;
+    text-decoration: none;
+    color: black;
+    outline:none;
+}
 #background{
     position: fixed;
     width:100%;

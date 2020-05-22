@@ -1,4 +1,13 @@
-
+window.addEventListener( "pageshow", function ( event ) {
+    var historyTraversal = event.persisted || 
+                           ( typeof window.performance != "undefined" && 
+                                window.performance.navigation.type === 2 );
+    if ( historyTraversal ) {
+      // Handle page restore.
+      window.location.reload();
+    }
+  });
+  
 
 $(document).ready(function (){
     // $(".safe_title").css('margin-left', (-($(".safe_title").width()/2)).toString()+"px");

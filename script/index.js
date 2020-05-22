@@ -7,8 +7,6 @@ window.addEventListener( "pageshow", function ( event ) {
       window.location.reload();
     }
   });
-  
-
 $(document).ready(function (){
     // $(".safe_title").css('margin-left', (-($(".safe_title").width()/2)).toString()+"px");
     // $(".space_title").css('margin-left', (-($(".space_title").width()/2)).toString()+"px");

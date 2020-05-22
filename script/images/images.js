@@ -57,7 +57,7 @@ $(document).ready(function (){
                     );
                 }else{ // if landscape
                     console.log("landscape");
-                    var newWidth = 0.8*(window_width);
+                    var newWidth = 0.7*(window_width);
                     var newHeight = (newWidth/IMGwidth)*IMGheight;
                     var img_top = 0.5*(window_height - newHeight);
 
@@ -82,7 +82,7 @@ $(document).ready(function (){
                 
                 if(IMGheight >= IMGwidth){ // if portrait
                     console.log("portrait");
-                    var newHeight = 1*(window_height);
+                    var newHeight = 0.9*(window_height);
                     var newWidth = (newHeight/IMGheight)*IMGwidth;
                     var img_top = 0.5*(window_height - newHeight);
 
@@ -92,7 +92,7 @@ $(document).ready(function (){
                     );
                 }else{ // if landscape
                     console.log("landscape");
-                    var newWidth = 1*(window_width);
+                    var newWidth = 0.9*(window_width);
                     var newHeight = (newWidth/IMGwidth)*IMGheight;
                     var img_top = 0.5*(window_height - newHeight);
 

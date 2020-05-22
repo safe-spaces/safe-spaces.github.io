@@ -54,14 +54,34 @@ a{
     vertical-align: middle;
 }
 
-.image_container{
+.rt_page{
     position: fixed;
-    height:100%;
-    top:0%;left:50%;
-    text-align: center;
+    height:5%;width:5%;
+    right:10px;
+    top:5px;
+
+    display: none;
+    background-color: rgba(176,196,222, 0);
+    outline:none;
+    border: none !important;
+    z-index: 3;;
+}
+
+.rt_page:hover{
+    background-color: rgba(176,196,222, 0);
+}
+.back_block{
+    position: fixed;
+    width: 100%;height:100%;
+    z-index: 1;
+    display: none;
+    background-color: rgba(176,196,222, 0.5);
+    top:0;left:0;
 }
 
 #IMAGES{
-    position: relative;
-    text-align: center;
+    position: fixed;
+    display: none;
+    z-index: 2;
 }
+

@@ -35,6 +35,8 @@ $(document).ready(function (){
     });
 
   if($(window).width() > 600) {
+        $('.image_wrap').animate({'top':'70%'}, 1000);
+
         img.addEventListener("load", function() {
                 var window_height = window.innerHeight;
                 var window_width = window.innerWidth;
@@ -72,6 +74,7 @@ $(document).ready(function (){
                 $('.back_block').css('display','block');
         });
     }else{
+        $('.image_wrap').animate({'top':'60%'}, 1000);
         img.addEventListener("load", function() {
                 var window_height = window.innerHeight;
                 var window_width = window.innerWidth;

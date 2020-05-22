@@ -45,7 +45,7 @@
         position: absolute;
         width: 95%;
         height:auto;
-        top:70%;left:2.5%;
+        top:100%;left:2.5%;
         text-align: center;
         margin-top: -80px;
     }
@@ -133,7 +133,7 @@
         position: absolute;
         width: 100%;
         height:auto;
-        top:40%;left:0%;
+        top:100%;left:0%;
         text-align: center;
         margin-top: -80px;
     }

@@ -76,11 +76,11 @@
 
     .door_box{
         position: fixed;
-        width:500px; height: auto;
-        top:0%; left:50%;margin-left: -250px;
+        width:300px; height: auto;
+        top:0%; left:50%;margin-left: -150px;
     }.door{
         position:relative;
-        width: 600px;height: auto;
+        width: 300px;height: auto;
         left:0%;
 
     }

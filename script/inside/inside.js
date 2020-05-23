@@ -22,7 +22,7 @@ $(document).ready(async function (){
             await sleep(1000);
             var source = './css/inside/'+ door_type[i+2];
             $('.door').attr({'src':source});
-
+        
         }
     });
 

@@ -8,9 +8,6 @@ window.addEventListener( "pageshow", function ( event ) {
     }
   });
 $(document).ready(function (){
-    // $(".safe_title").css('margin-left', (-($(".safe_title").width()/2)).toString()+"px");
-    // $(".space_title").css('margin-left', (-($(".space_title").width()/2)).toString()+"px");
-
     var speed = 15; // in seconds
 
     $("#inside0").animate({'left':'130%'},5);

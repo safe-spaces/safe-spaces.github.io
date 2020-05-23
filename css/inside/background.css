@@ -1,26 +1,43 @@
 
 
-    #background{
-        position: fixed;
-        width:100%;
-        height:200%;
-        left:0;
-        top:0;
-        background-image:url("background.JPG");
-        background-size: 100% auto ;
-        background-position: 0px 0px;
-        background-repeat: no-repeat;
-        z-index:-1;
-    }#back{
-        position: fixed;
-        height:20%;width: 20%;
-        text-align: center;
-        border-style: none !important;
-        z-index: 2;
+#background{
+    position: fixed;
+    width:100%;
+    height:200%;
+    left:0;
+    top:0;
+    background-image:url("background.JPG");
+    background-size: 100% auto ;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    z-index:-1;
+}#back{
+    position: fixed;
+    height:20%;width: 20%;
+    text-align: center;
+    border-style: none !important;
+   z-index: 2;
 
-    }#back_img{
-        position: static;
-        height: auto; width: 100%;
-        top:0;left:1%;
-        z-index: 1;
-    }
+}#back_img{
+    position: static;
+    height: auto; width: 100%;
+    top:0;left:1%;
+    z-index: 1;
+}
+
+#title{
+    position: fixed;
+    width:60%;height:auto;
+    left:20%; top:10%;
+}
+
+.door_box{
+    position: fixed;
+    width:400px; height: auto;
+    top:20%; left:50%;margin-left: -200px;
+}.door{
+    position:relative;
+    width: 400px;height: auto;
+    left:0%;
+
+}

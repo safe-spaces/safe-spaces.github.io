@@ -35,7 +35,7 @@ $(document).ready(function (){
     });
 
   if($(window).width() > 600) {
-        $('.image_wrap').animate({'top':'70%'}, 1000);
+        $('.image_wrap').animate({'top':'85%'}, 1000);
 
         img.addEventListener("load", function() {
                 var window_height = window.innerHeight;

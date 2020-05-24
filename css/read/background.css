@@ -1,3 +1,5 @@
+body{overflow-x: hidden;}
+
 a{
     border: none !important;
     text-decoration: none;
@@ -27,4 +29,19 @@ a{
     height: auto; width: 100%;
     top:0;left:1%;
     z-index: 1;
+}
+#title{
+    position: fixed;
+    z-index: -1;
+    width:30%;height: auto;
+    left:35%;
+}
+
+.text_box{  
+    position: fixed;
+    width:70%;height:auto;
+    top:45%;
+    left:15%;
+    text-align: center;
+    font-family: "Lucida Console", Monaco, monospace;
 }

@@ -118,11 +118,10 @@
         width: 100%;height: auto;
         padding-bottom: 0px;
     }
-
     .inst{
         position: relative;
-        width: 100px;height: auto;
-        left:50%;margin-left: -50px;
+        width: 50px;height: auto;
+        left:50%;margin-left: -25px;
     }
 
 }

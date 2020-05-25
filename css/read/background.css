@@ -107,9 +107,9 @@
 
     .text_box{  
         position: relative;
-        width:80%;height:auto;
+        width:100%;height:auto;
         top:0%;
-        left:10%;
+        left:0%;
         padding:20px;
         text-align: center;
         opacity: .8;

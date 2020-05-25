@@ -45,3 +45,17 @@ $(document).ready(function (){
     }
 
 });
+
+
+$('inst').on({'click':function(){
+  var destination = "instagram://user?username=chloebostonengland"; 
+  if( navigator.userAgent.match(/Android/i) ) {
+    // use Android's redirect
+    document.location = destination;   
+  }   
+  else {
+    // use iOS redirect
+    window.location.replace( destination );
+  }
+}});
+

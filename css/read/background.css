@@ -31,7 +31,7 @@ a{
     z-index: 1;
 }
 #title{
-    position: fixed;
+    position: relative;
     z-index: -1;
     width:30%;height: auto;
     left:35%;
@@ -39,17 +39,23 @@ a{
 
 .text_box{  
     position: relative;
-    width:80%;height:80%;
-    top:45%;
+    width:80%;height:auto;
+    top:0%;
     left:10%;
     padding:20px;
-
+    text-align: center;
+    opacity: .8;
 }
 .text{
-    text-align: justify;
-    font-family: 'Cooper-Heavy', Arial, sans-serif;
-    font-weight:normal;
-    font-style:normal;
+    position: relative;
+    width: 80%;height: auto;
+    padding-bottom: 0px;
+}
+
+.inst{
+    position: relative;
+    width: 100px;height: auto;
+    left:50%;margin-left: -50px;
 }
 
 

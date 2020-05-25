@@ -29,10 +29,8 @@ $(document).ready(async function (){
             var source = './css/inside/'+ door_type[i+2];
             $('.door').attr({'src':source}); 
 
-            await sleep(200);
-            $('.enter').css({'opacity':'0'}); 
-            $('.click').css({'opacity':'0'}); 
-
+            await sleep(1000)
+            window.location.href="tent.html";
         }
     });
 });

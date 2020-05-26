@@ -64,15 +64,15 @@
 }
 
 @media only screen and (max-width: 500px) {
-
     html{
         overflow: hidden;
     }
-    body{overflow: hidden;
+    body{
+        overflow: hidden;
         background-image:url("home.jpeg");
         background-size:  cover;
         background-position: 0px 0px;
-        background-repeat: repeat-y;
+        background-repeat: rrepeat;
     }
     *{z-index: 0;}
 /* 

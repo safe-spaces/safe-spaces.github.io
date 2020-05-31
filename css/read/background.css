@@ -64,6 +64,20 @@
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 600px) {
 
     body{overflow-y: scroll;}
@@ -120,8 +134,9 @@
     }
     .inst{
         position: relative;
-        width: 50px;height: auto;
-        left:50%;margin-left: -25px;
+        width: 40px;height: auto;
+        left:50%;margin-left: -20px;
+        padding-top: 10px;padding-bottom: 20px;
     }
 
 }

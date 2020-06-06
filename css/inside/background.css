@@ -34,7 +34,7 @@
     .enter{
         position: fixed;
         width:200px;height: auto;
-        top:7%;left: 50%;margin-left: 20px;
+        top:7%;left: 50%;margin-left: -50px;
     }.open_me{
         position: fixed;
         width:150px;height: auto;
@@ -46,7 +46,7 @@
     .door_box{
         position: fixed;
         width:500px; height: auto;
-        bottom: 3%; left:50%;margin-left: -250px;
+        bottom: 3%; left:50%;margin-left: -325px;
         z-index: 2
     }.door{
         position:relative;
@@ -96,7 +96,7 @@
     .door_box{
         position: fixed;
         width:300px; height: auto;
-        top:20%; left:50%;margin-left: -150px;
+        top:20%; left:50%;margin-left: -225px;
     }.door{
         position:relative;
         width: 300px;height: auto;
@@ -107,7 +107,7 @@
     .enter{
         position: fixed;
         width:100px;height: auto;
-        top:20%;left: 50%;margin-left: 20px; margin-top: -35px;
+        top:20%;left: 50%;margin-left: -50px; margin-top: -35px;
     }.open_me{
         position: fixed;
         width:150px;height: auto;

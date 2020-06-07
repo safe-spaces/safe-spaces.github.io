@@ -1,5 +1,7 @@
 
-var currentImage = 20;
+var currentImage = 60;
+
+var turningKey = 0;
 
 $(document).ready(function(){
 
@@ -8,31 +10,53 @@ $(document).ready(function(){
 
     for(var i =2; i<18; i++){ // images not yet loaded   --  [which are : 2 to 17]
         $('.'+ classNames[i]).attr('src', '../safe-spaces.github.io/css/stills/photos/' + imageNames[i] + '.jpg');
-        console.log(classNames[i]+"  "+imageNames[i]);
     }   
 
     $('.left_button').click(function(){
-        let holdingOne = '.' + classNames[(currentImage % 20)];
-        let holdingTwo = '.' + classNames[((currentImage+1) % 20)];
+        if(turningKey == 0){
+            turningKey = 1;
 
-        $(holdingTwo).animate({'left':'150%'}, 5);
-
-        $(holdingOne).animate({'left':'-150%'}, 3000);
-        $(holdingTwo).animate({'left':'50%'}, 3000);
-
-        currentImage++;
+            let holdingOne = '.' + classNames[(currentImage % 20)];
+            let holdingTwo = '.' + classNames[((currentImage+1) % 20)];
+    
+            $(holdingTwo).animate({'left':'150%'}, 5);
+    
+            if($(window).width() > 600) {
+                $(holdingOne).animate({'left':'-150%'}, 3000);
+                $(holdingTwo).animate({'left':'50%'}, 3000);  
+                setTimeout(function(){turningKey = 0;}, 3000);  
+            }else{
+                $(holdingOne).animate({'left':'-150%'}, 1000);
+                $(holdingTwo).animate({'left':'50%'}, 1000); 
+                setTimeout(function(){turningKey = 0;}, 1000);   
+            }
+            currentImage++;
+        }
     });
     $('.right_button').click(function(){
-        let holdingOne = '.' + classNames[(currentImage % 20)];
-        let holdingTwo = '.' + classNames[((currentImage-1) % 20)];
+        if(turningKey == 0){
+            turningKey = 1;
 
-        $(holdingTwo).animate({'left':'-150%'}, 5);
+            if(currentImage == 0){ // If curentImage < 0 then can form 'holdingOne' and 'honldingTwo' due to modulus
+                currentImage = 60;
+            }
 
-        $(holdingOne).animate({'left':'150%'}, 3000);
-        $(holdingTwo).animate({'left':'50%'}, 3000);
-
-        currentImage--;
-
+            let holdingOne = '.' + classNames[(currentImage % 20)];
+            let holdingTwo = '.' + classNames[((currentImage-1) % 20)];
+    
+            $(holdingTwo).animate({'left':'-150%'}, 5);
+    
+            if($(window).width() > 600) {
+                $(holdingOne).animate({'left':'150%'}, 3000);
+                $(holdingTwo).animate({'left':'50%'}, 3000);
+                setTimeout(function(){turningKey = 0;}, 3000);
+            }else{
+                $(holdingOne).animate({'left':'150%'}, 1000);
+                $(holdingTwo).animate({'left':'50%'}, 1000);
+                setTimeout(function(){turningKey = 0;}, 1000);
+            }
+            currentImage--;
+        }
     });
 
 });

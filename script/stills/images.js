@@ -29,15 +29,10 @@ $(document).ready(function(){
         
                 $(holdingTwo).animate({'left':'150%'}, 5);
         
-                if($(window).width() > 600) {
                     $(holdingOne).animate({'left':'-150%'}, 3000);
                     $(holdingTwo).animate({'left':'50%'}, 3000);  
                     setTimeout(function(){turningKey = 0;}, 3000);  
-                }else{
-                    $(holdingOne).animate({'left':'-150%'}, 1000);
-                    $(holdingTwo).animate({'left':'50%'}, 1000); 
-                    setTimeout(function(){turningKey = 0;}, 1000);   
-                }
+ 
                 currentImage++;
             }
         });
@@ -54,15 +49,10 @@ $(document).ready(function(){
         
                 $(holdingTwo).animate({'left':'-150%'}, 5);
         
-                if($(window).width() > 600) {
                     $(holdingOne).animate({'left':'150%'}, 3000);
                     $(holdingTwo).animate({'left':'50%'}, 3000);
                     setTimeout(function(){turningKey = 0;}, 3000);
-                }else{
-                    $(holdingOne).animate({'left':'150%'}, 1000);
-                    $(holdingTwo).animate({'left':'50%'}, 1000);
-                    setTimeout(function(){turningKey = 0;}, 1000);
-                }
+
                 currentImage--;
             }
         });
@@ -105,6 +95,43 @@ $(document).ready(function(){
                     $(holdingTwo).animate({'left':'50%'}, 1000);
                     setTimeout(function(){turningKey = 0;}, 1000);
                 
+                currentImage--;
+            }
+        });
+
+        $('.left_button').click(function(){
+            if(turningKey == 0){
+                turningKey = 1;
+    
+                let holdingOne = '.' + classNames[(currentImage % 20)];
+                let holdingTwo = '.' + classNames[((currentImage+1) % 20)];
+        
+                $(holdingTwo).animate({'left':'150%'}, 5);
+        
+                    $(holdingOne).animate({'left':'-150%'}, 1000);
+                    $(holdingTwo).animate({'left':'50%'}, 1000); 
+                    setTimeout(function(){turningKey = 0;}, 1000);   
+
+                currentImage++;
+            }
+        });
+        $('.right_button').click(function(){
+            if(turningKey == 0){
+                turningKey = 1;
+    
+                if(currentImage == 0){ // If curentImage < 0 then can form 'holdingOne' and 'honldingTwo' due to modulus
+                    currentImage = 60;
+                }
+    
+                let holdingOne = '.' + classNames[(currentImage % 20)];
+                let holdingTwo = '.' + classNames[((currentImage-1) % 20)];
+        
+                $(holdingTwo).animate({'left':'-150%'}, 5);
+
+                    $(holdingOne).animate({'left':'150%'}, 1000);
+                    $(holdingTwo).animate({'left':'50%'}, 1000);
+                    setTimeout(function(){turningKey = 0;}, 1000);
+
                 currentImage--;
             }
         });

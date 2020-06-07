@@ -12,51 +12,109 @@ $(document).ready(function(){
         $('.'+ classNames[i]).attr('src', '../safe-spaces.github.io/css/stills/photos/' + imageNames[i] + '.jpg');
     }   
 
-    $('.left_button').click(function(){
-        if(turningKey == 0){
-            turningKey = 1;
+    for(var i=0; i<20;i++){
+        let WIDTH = '-'+ ($('.zero').width()/2) + 'px'
+        $('.'+ classNames[i]).css('margin-left', WIDTH);
+        console.log(WIDTH)
+    }
 
-            let holdingOne = '.' + classNames[(currentImage % 20)];
-            let holdingTwo = '.' + classNames[((currentImage+1) % 20)];
+
+    if($(window).width() > 600) {
+        $('.left_button').click(function(){
+            if(turningKey == 0){
+                turningKey = 1;
     
-            $(holdingTwo).animate({'left':'150%'}, 5);
+                let holdingOne = '.' + classNames[(currentImage % 20)];
+                let holdingTwo = '.' + classNames[((currentImage+1) % 20)];
+        
+                $(holdingTwo).animate({'left':'150%'}, 5);
+        
+                if($(window).width() > 600) {
+                    $(holdingOne).animate({'left':'-150%'}, 3000);
+                    $(holdingTwo).animate({'left':'50%'}, 3000);  
+                    setTimeout(function(){turningKey = 0;}, 3000);  
+                }else{
+                    $(holdingOne).animate({'left':'-150%'}, 1000);
+                    $(holdingTwo).animate({'left':'50%'}, 1000); 
+                    setTimeout(function(){turningKey = 0;}, 1000);   
+                }
+                currentImage++;
+            }
+        });
+        $('.right_button').click(function(){
+            if(turningKey == 0){
+                turningKey = 1;
     
-            if($(window).width() > 600) {
-                $(holdingOne).animate({'left':'-150%'}, 3000);
-                $(holdingTwo).animate({'left':'50%'}, 3000);  
-                setTimeout(function(){turningKey = 0;}, 3000);  
-            }else{
+                if(currentImage == 0){ // If curentImage < 0 then can form 'holdingOne' and 'honldingTwo' due to modulus
+                    currentImage = 60;
+                }
+    
+                let holdingOne = '.' + classNames[(currentImage % 20)];
+                let holdingTwo = '.' + classNames[((currentImage-1) % 20)];
+        
+                $(holdingTwo).animate({'left':'-150%'}, 5);
+        
+                if($(window).width() > 600) {
+                    $(holdingOne).animate({'left':'150%'}, 3000);
+                    $(holdingTwo).animate({'left':'50%'}, 3000);
+                    setTimeout(function(){turningKey = 0;}, 3000);
+                }else{
+                    $(holdingOne).animate({'left':'150%'}, 1000);
+                    $(holdingTwo).animate({'left':'50%'}, 1000);
+                    setTimeout(function(){turningKey = 0;}, 1000);
+                }
+                currentImage--;
+            }
+        });
+    }else{
+
+        $( document ).on( "swipeleft", function(){
+            if(turningKey == 0){
+                turningKey = 1;
+    
+                let holdingOne = '.' + classNames[(currentImage % 20)];
+                let holdingTwo = '.' + classNames[((currentImage+1) % 20)];
+        
+                $(holdingTwo).animate({'left':'150%'}, 5);
+
                 $(holdingOne).animate({'left':'-150%'}, 1000);
                 $(holdingTwo).animate({'left':'50%'}, 1000); 
                 setTimeout(function(){turningKey = 0;}, 1000);   
-            }
-            currentImage++;
-        }
-    });
-    $('.right_button').click(function(){
-        if(turningKey == 0){
-            turningKey = 1;
 
-            if(currentImage == 0){ // If curentImage < 0 then can form 'holdingOne' and 'honldingTwo' due to modulus
-                currentImage = 60;
+                currentImage++;
             }
 
-            let holdingOne = '.' + classNames[(currentImage % 20)];
-            let holdingTwo = '.' + classNames[((currentImage-1) % 20)];
+
+        });
+
+
+        $( document ).on( "swiperight", function(){
+
+            if(turningKey == 0){
+                turningKey = 1;
     
-            $(holdingTwo).animate({'left':'-150%'}, 5);
+                if(currentImage == 0){ // If curentImage < 0 then can form 'holdingOne' and 'honldingTwo' due to modulus
+                    currentImage = 60;
+                }
     
-            if($(window).width() > 600) {
-                $(holdingOne).animate({'left':'150%'}, 3000);
-                $(holdingTwo).animate({'left':'50%'}, 3000);
-                setTimeout(function(){turningKey = 0;}, 3000);
-            }else{
-                $(holdingOne).animate({'left':'150%'}, 1000);
-                $(holdingTwo).animate({'left':'50%'}, 1000);
-                setTimeout(function(){turningKey = 0;}, 1000);
+                let holdingOne = '.' + classNames[(currentImage % 20)];
+                let holdingTwo = '.' + classNames[((currentImage-1) % 20)];
+        
+                $(holdingTwo).animate({'left':'-150%'}, 5);
+        
+ 
+                    $(holdingOne).animate({'left':'150%'}, 1000);
+                    $(holdingTwo).animate({'left':'50%'}, 1000);
+                    setTimeout(function(){turningKey = 0;}, 1000);
+                
+                currentImage--;
             }
-            currentImage--;
-        }
-    });
+        });
+
+    }
+
 
 });
+
+
+

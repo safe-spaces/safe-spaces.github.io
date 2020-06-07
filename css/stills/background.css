@@ -160,7 +160,7 @@
     .image_display{
         position: fixed;
         width: 100%; height: 80%;
-        top:10%;
+        top:0%;
         left:0%;
     }
 
@@ -172,9 +172,8 @@
         left:200%;
         height:auto;width:300px;
         margin-left:-150px;
-        top:50%;margin-top: -200px;
+        top:50px;
 
-        z-index: 2;
 
     }
 
@@ -185,34 +184,36 @@
 
     .left_button{
         position: fixed;
-        height:80%; top:10%;
+        height:100%; top:0%;
         width:50%; left:0;
 
     }
     .right_button{
         position: fixed;
-        height:80%; top:10%;
+        height:100%; top:0%;
         width:50%;left:50%;
     }
 
 
 
     .left_arrow{
-        position: fixed;
+        position: absolute;
 
         width: 80px;height: auto;
         -webkit-transform: scaleX(-1);
         transform: scaleX(-1);
-        left: 0px;
-        top:50%;margin-top: -310px;
+        left:50px;
+        top:500px;
+
+        z-index: 1;
 
     }
     .right_arrow{
-        position: fixed;
+        position: absolute;
         width: 80px;height: auto;
-        right:0px;
-        top:50%;margin-top: -310px;
-
+        right:50px;
+        top:500px;
+        z-index: 1;
     }
 
 }

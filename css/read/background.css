@@ -14,7 +14,7 @@
         height:200%;
         left:0;
         top:0;
-        background-image:url("background.JPG");
+        background-image:url("../home/home.jpeg");
         background-size:  auto 200%;
         background-position: 0px -500px;
         background-repeat: no-repeat;
@@ -101,10 +101,11 @@
         height:200%;
         left:0;
         top:0;
-        background-image:url("background.JPG");
-        background-size:  auto 200%;
-        background-position: 0px -500px;
-        background-repeat: no-repeat;
+        background-image:url("../home/home.jpeg");
+        
+        background-size:  cover;
+        background-position: 0px 0px;
+        background-repeat: rrepeat;
         z-index:-1;
     }#back{
         position: fixed;

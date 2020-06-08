@@ -11,25 +11,26 @@ $(document).ready(async function (){
     $('.door').on({
         'click': async function(){
 
-            var x = event.clientX;
-            var y = event.clientY;
-            console.log(x,' by ', y);
+                var x = event.clientX;
+                var y = event.clientY;
+                console.log(x,' by ', y);
+        
+                $('.click').css({'position':'absolute','left':(x+'px'),'top':(y+'px'), 'display':'block'});
     
-            $('.click').css({'position':'absolute','left':(x+'px'),'top':(y+'px'), 'display':'block'});
+                await sleep(1000);
+    
+                $("#closedDoor").css('display','none');
+    
+                await sleep(1000);
+    
+                $("#downDoor").css('display','none');
+    
+                
+    
+    
+                await sleep(1000)
+                window.location.href="tent.html";
 
-            await sleep(500);
-
-            $("#closedDoor").css('display','none');
-
-            await sleep(500);
-
-            $("#downDoor").css('display','none');
-
-            
-
-
-            await sleep(1000)
-            window.location.href="tent.html";
         }
     });
 });

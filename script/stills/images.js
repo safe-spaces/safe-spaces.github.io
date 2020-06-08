@@ -99,7 +99,7 @@ $(document).ready(function(){
             }
         });
 
-        $('.left_button').click(function(){
+        $('.right_button').click(function(){
             if(turningKey == 0){
                 turningKey = 1;
     
@@ -115,7 +115,7 @@ $(document).ready(function(){
                 currentImage++;
             }
         });
-        $('.right_button').click(function(){
+        $('.left_button').click(function(){
             if(turningKey == 0){
                 turningKey = 1;
     

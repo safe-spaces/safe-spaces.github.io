@@ -11,7 +11,7 @@ function sleep(ms) {
 
 
 
-    $(window).bind("load", async function() {
+    $(window).on("load", async function() {
         console.log('finally')
         $('.door').on({
             'click': async function(){

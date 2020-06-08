@@ -20,7 +20,7 @@ $(document).ready(function(){
 
 
     if($(window).width() > 600) {
-        $('.left_button').click(function(){
+        $('.right_button').click(function(){
             if(turningKey == 0){
                 turningKey = 1;
     
@@ -29,14 +29,14 @@ $(document).ready(function(){
         
                 $(holdingTwo).animate({'left':'150%'}, 5);
         
-                    $(holdingOne).animate({'left':'-150%'}, 3000);
-                    $(holdingTwo).animate({'left':'50%'}, 3000);  
-                    setTimeout(function(){turningKey = 0;}, 3000);  
+                    $(holdingOne).animate({'left':'-150%'}, 2000);
+                    $(holdingTwo).animate({'left':'50%'}, 2000);  
+                    setTimeout(function(){turningKey = 0;}, 2000);  
  
                 currentImage++;
             }
         });
-        $('.right_button').click(function(){
+        $('.left_button').click(function(){
             if(turningKey == 0){
                 turningKey = 1;
     
@@ -49,9 +49,9 @@ $(document).ready(function(){
         
                 $(holdingTwo).animate({'left':'-150%'}, 5);
         
-                    $(holdingOne).animate({'left':'150%'}, 3000);
-                    $(holdingTwo).animate({'left':'50%'}, 3000);
-                    setTimeout(function(){turningKey = 0;}, 3000);
+                    $(holdingOne).animate({'left':'150%'}, 2000);
+                    $(holdingTwo).animate({'left':'50%'}, 2000);
+                    setTimeout(function(){turningKey = 0;},2000);
 
                 currentImage--;
             }

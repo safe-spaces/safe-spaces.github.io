@@ -12,7 +12,28 @@ function returnToPage(){
 };
 
 
+let imageID = ['adrian','alex','aure','aman', 'beck', 'beth','cath','char',
+                'chlo','ella','fin','gonz','har','hel','holly','immy','james','jess','lind','luke',
+                'man','mass','mya','med','megan','molly','pop','rav','ros','soph','sky','theo','ruby','kit',
+                'ellaa','gina','mil'
+            ]
+
+function loadImages(){
+    var arrLength = imageID.length
+
+    for( var i = 6 ; i < arrLength ; i++ ){
+        imageSource = './thumbnails/' + imageID[i] + '.jpg';        
+        $('#' + imageID[i]).attr('src', imageSource);
+
+        console.log(imageSource)
+    }
+}
+
+
 $(document).ready(function (){
+
+    loadImages();
+
     let img = document.getElementById("IMAGES");
 
     var IMGheight;
@@ -33,6 +54,8 @@ $(document).ready(function (){
 
         }
     });
+
+
 
   if($(window).width() > 600) {
         $('.image_wrap').animate({'top':'85%'}, 1000);

@@ -10,24 +10,23 @@ $(document).ready(async function (){
 
     $('.door').on({
         'click': async function(){
+
             var x = event.clientX;
             var y = event.clientY;
             console.log(x,' by ', y);
     
             $('.click').css({'position':'absolute','left':(x+'px'),'top':(y+'px'), 'display':'block'});
-    
 
-            var source = './css/inside/'+ door_type[i];
-            $('.door').attr('src',source);
+            await sleep(500);
 
-            await sleep(300);
+            $("#closedDoor").css('display','none');
 
-            var source = './css/inside/'+ door_type[i+1];
-            $('.door').attr('src',source);
+            await sleep(500);
+
+            $("#downDoor").css('display','none');
+
             
-            await sleep(1000);
-            var source = './css/inside/'+ door_type[i+2];
-            $('.door').attr({'src':source}); 
+
 
             await sleep(1000)
             window.location.href="tent.html";
